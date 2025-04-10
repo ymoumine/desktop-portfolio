@@ -57,7 +57,7 @@ export function WindowsProvider({ children }: { children: ReactNode }) {
     }
 
     // Calculate default position if not provided
-    const newX = window.x ?? Math.abs(Math.random() * 600)
+    const newX = window.x ?? Math.abs(Math.random() * 500 + 300)
     const newY = window.y ?? Math.abs(Math.random() * 300)
 
     const newZIndex = highestZIndex + 1
@@ -110,9 +110,9 @@ export function WindowsProvider({ children }: { children: ReactNode }) {
     setHighestZIndex(newZIndex)
 
     setWindows(
-      windows.map((window) => (window.id === id ? { ...window, isMinimized: false, zIndex: newZIndex } : window)),
+      windows.map((window) => (window.id === id ? { ...window, isMinimized: !window.isMinimized, zIndex: newZIndex } : window)),
     )
-
+    
     setActiveWindowId(id)
   }
 

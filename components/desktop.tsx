@@ -41,7 +41,7 @@ export default function Desktop() {
     addWindow({
       id: "resume",
       title: "Resume",
-      icon: "/icons/document.png",
+      icon: "/icons/pdf.png",
       component: <ResumeApp />,
       width: 700,
       height: 800,
@@ -74,7 +74,7 @@ export default function Desktop() {
     addWindow({
       id: "about",
       title: "About Me",
-      icon: "/icons/user.png",
+      icon: "/icons/portal.png",
       component: <AboutApp />,
       width: 600,
       height: 400,
@@ -82,6 +82,7 @@ export default function Desktop() {
   }
 
   const openTerminal = () => {
+    // add pop up animation
     addWindow({
       id: "terminal",
       title: "Terminal",
@@ -94,12 +95,12 @@ export default function Desktop() {
 
   return (
     <div
-  className="h-[calc(100vh-40px)] w-full p-4 grid grid-cols-1 auto-rows-min gap-6 flex justify-items-start"
+  className="h-[calc(100vh-40px)] w-[10%] p-4 grid grid-cols-2 grid-rows-6 gap-20 flex justify-items-start items-start"
   onContextMenu={handleContextMenu}
   onClick={closeContextMenu}
 >
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/folder.png?height=40&width=40"
     label="Projects"
     onClick={openProjects}
     position={{ col: 1, row: 1 }}
@@ -107,7 +108,7 @@ export default function Desktop() {
   />
 
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/pdf.png"
     label="Resume"
     onClick={openResume}
     position={{ col: 1, row: 2 }}
@@ -115,7 +116,7 @@ export default function Desktop() {
   />
 
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/github.png?height=40&width=40"
     label="GitHub"
     onClick={openGithub}
     position={{ col: 1, row: 3 }}
@@ -123,15 +124,15 @@ export default function Desktop() {
   />
 
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/spotify.png?height=40&width=40"
     label="Spotify"
     onClick={openSpotify}
-    position={{ col: 2, row: 4 }}
+    position={{ col: 1, row: 4 }}
     iconType="spotify"
   />
 
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/portal.png?height=40&width=40"
     label="About Me"
     onClick={openAbout}
     position={{ col: 1, row: 5 }}
@@ -139,12 +140,22 @@ export default function Desktop() {
   />
 
   <DesktopIcon
-    icon="/placeholder.svg?height=40&width=40"
+    icon="/icons/terminal.png?height=40&width=40"
     label="Terminal"
     onClick={openTerminal}
-    position={{ col: 1, row: 6 }}
+    position={{ col: 2, row: 6 }}
     iconType="terminal"
   />
+
+<DesktopIcon
+    icon="/icons/mail.png?height=40&width=40"
+    label="Contacts"
+    onClick={openTerminal}
+    position={{ col: 2, row: 2 }}
+    iconType="terminal"
+  />
+
+
 
   {contextMenu && (
     <ContextMenu

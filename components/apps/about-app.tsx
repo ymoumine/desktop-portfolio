@@ -17,7 +17,7 @@ export default function AboutApp() {
           <div className="md:w-1/3">
             <div className="bg-gray-50 rounded-lg p-4 border text-center">
               <img
-                src="/placeholder.svg?height=128&width=128"
+                src="/icons/folder.png?height=128&width=128"
                 alt="Profile"
                 className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow"
               />
@@ -46,13 +46,13 @@ export default function AboutApp() {
               <div className="mt-4 pt-4 border-t">
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                    <img src="/placeholder.svg?height=20&width=20" alt="GitHub" className="w-5 h-5" />
+                    <img src="/icons/folder.png?height=20&width=20" alt="GitHub" className="w-5 h-5" />
                   </a>
                   <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                    <img src="/placeholder.svg?height=20&width=20" alt="LinkedIn" className="w-5 h-5" />
+                    <img src="/icons/folder.png?height=20&width=20" alt="LinkedIn" className="w-5 h-5" />
                   </a>
                   <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                    <img src="/placeholder.svg?height=20&width=20" alt="Twitter" className="w-5 h-5" />
+                    <img src="/icons/folder.png?height=20&width=20" alt="Twitter" className="w-5 h-5" />
                   </a>
                 </div>
               </div>

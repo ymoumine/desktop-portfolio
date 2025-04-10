@@ -29,7 +29,7 @@ type GitHubUser = {
 // Sample data for demo purposes
 const SAMPLE_USER: GitHubUser = {
   login: "devyassine",
-  avatar_url: "/placeholder.svg?height=96&width=96",
+  avatar_url: "/icons/folder.png?height=96&width=96",
   name: "Yassine Developer",
   bio: "Full Stack Developer passionate about React, Next.js, and building great user experiences",
   followers: 120,
@@ -194,11 +194,11 @@ export default function GithubApp() {
             <div className="bg-gray-50 rounded-lg p-4 border">
               <div className="flex flex-col items-center text-center mb-4">
                 <img
-                  src={user.avatar_url || "/placeholder.svg"}
+                  src={user.avatar_url || "/icons/folder.png"}
                   alt={user.name}
                   className="w-24 h-24 rounded-full mb-3"
                   onError={(e) => {
-                    ;(e.target as HTMLImageElement).src = `/placeholder.svg?height=96&width=96`
+                    ;(e.target as HTMLImageElement).src = `/icons/folder.png?height=96&width=96`
                   }}
                 />
                 <h3 className="text-lg font-medium">{user.name}</h3>

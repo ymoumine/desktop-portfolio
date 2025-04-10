@@ -22,7 +22,7 @@ const SAMPLE_PROJECTS: Project[] = [
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/username/ecommerce",
     demo: "https://ecommerce-demo.vercel.app",
-    image: "/placeholder.svg?height=200&width=320",
+    image: "/icons/folder.png?height=200&width=320",
     featured: true,
   },
   {
@@ -32,7 +32,7 @@ const SAMPLE_PROJECTS: Project[] = [
     technologies: ["Next.js", "OpenAI API", "TailwindCSS"],
     github: "https://github.com/username/ai-image-gen",
     demo: "https://ai-image-gen.vercel.app",
-    image: "/placeholder.svg?height=200&width=320",
+    image: "/icons/folder.png?height=200&width=320",
     featured: true,
   },
   {
@@ -42,7 +42,7 @@ const SAMPLE_PROJECTS: Project[] = [
     technologies: ["Vue.js", "Firebase", "Vuetify"],
     github: "https://github.com/username/task-manager",
     demo: "https://task-manager-demo.vercel.app",
-    image: "/placeholder.svg?height=200&width=320",
+    image: "/icons/folder.png?height=200&width=320",
     featured: false,
   },
   {
@@ -52,7 +52,7 @@ const SAMPLE_PROJECTS: Project[] = [
     technologies: ["React", "Weather API", "Chart.js"],
     github: "https://github.com/username/weather-app",
     demo: "https://weather-dashboard-demo.vercel.app",
-    image: "/placeholder.svg?height=200&width=320",
+    image: "/icons/folder.png?height=200&width=320",
     featured: false,
   },
   {
@@ -62,7 +62,7 @@ const SAMPLE_PROJECTS: Project[] = [
     technologies: ["Next.js", "TailwindCSS", "React Draggable"],
     github: "https://github.com/username/portfolio-os",
     demo: "#",
-    image: "/placeholder.svg?height=200&width=320",
+    image: "/icons/folder.png?height=200&width=320",
     featured: true,
   },
 ]
@@ -130,11 +130,11 @@ export default function ProjectsApp() {
               <div className="h-40 bg-gray-100 relative">
                 {project.image ? (
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/icons/folder.png"}
                     alt={project.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      ;(e.target as HTMLImageElement).src = `/placeholder.svg?height=160&width=320`
+                      ;(e.target as HTMLImageElement).src = `/icons/folder.png?height=160&width=320`
                     }}
                   />
                 ) : (

@@ -43,7 +43,7 @@ export default function DesktopIcon({ icon, label, onClick, position, iconType }
       data-icon={iconType}
     >
       <div className="w-12 h-12 flex items-center justify-center mb-1">
-        <img src={`/placeholder.svg?height=40&width=40`} alt={label} className="w-10 h-10 object-contain" />
+        <img src={icon} alt={label} className="w-10 h-10 object-contain" />
       </div>
       <span className="text-white text-xs font-medium text-center px-1 py-0.5 bg-black/40 rounded">{label}</span>
     </div>

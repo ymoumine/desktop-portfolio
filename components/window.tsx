@@ -119,7 +119,7 @@ export default function Window({ window, isActive }: WindowProps) {
           )}
         >
           <div className="flex items-center gap-2">
-            <img src={window.icon || "/placeholder.svg"} alt="" className="w-4 h-4" />
+            <img src={window.icon || "/icons/folder.png"} alt="" className="w-4 h-4" />
             <span className={cn("text-sm font-medium", isActive ? "text-white" : "text-gray-700")}>{window.title}</span>
           </div>
           <div className="flex items-center">

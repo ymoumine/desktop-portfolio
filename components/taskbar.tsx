@@ -31,9 +31,11 @@ export default function Taskbar() {
       if (clickedWindow.isMinimized) {
         // Restore the window if it's minimized
         restoreMinimizedWindow(windowId)
+        //clickedWindow.isMinimized = false
+        //setActiveWindow(windowId)
       } else if (activeWindowId === windowId) {
         // Minimize the window if it's already active
-        // minimizeWindow(windowId);
+        restoreMinimizedWindow(windowId)
       } else {
         // Set as active window
         setActiveWindow(windowId)
@@ -54,13 +56,13 @@ export default function Taskbar() {
           <button
             key={window.id}
             className={cn(
-              "h-8 px-2 flex items-center rounded hover:bg-white/10 min-w-[120px] max-w-[200px] taskbar-item",
-              activeWindowId === window.id ? "bg-white/20" : "",
-              window.isMinimized ? "opacity-70" : "",
+              "h-8 w-10 px-2 flex items-center rounded hover:bg-white/10 taskbar-item",
+              // add line below to highlight active window
+              activeWindowId === window.id ? "bg-white/10" : ""
             )}
             onClick={() => handleTaskbarItemClick(window.id)}
           >
-            <img src={window.icon || "/placeholder.svg?height=16&width=16"} alt="" className="w-4 h-4 mr-2" />
+            <img src={window.icon || "/icons/folder.png?height=16&width=16"} alt="" className="w-6 h-6 mr-2 underline" />
             <span className="text-white text-xs truncate">{window.title}</span>
           </button>
         ))}

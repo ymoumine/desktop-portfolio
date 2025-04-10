@@ -20,7 +20,7 @@ const SAMPLE_TRACKS: Track[] = [
     title: "Coding Session",
     artist: "Lo-Fi Beats",
     album: "Productive Vibes",
-    cover: "/placeholder.svg?height=192&width=192",
+    cover: "/icons/folder.png?height=192&width=192",
     duration: 243,
   },
   {
@@ -28,7 +28,7 @@ const SAMPLE_TRACKS: Track[] = [
     title: "Late Night Debugging",
     artist: "Chill Hop",
     album: "Midnight Code",
-    cover: "/placeholder.svg?height=192&width=192",
+    cover: "/icons/folder.png?height=192&width=192",
     duration: 187,
   },
   {
@@ -36,7 +36,7 @@ const SAMPLE_TRACKS: Track[] = [
     title: "Algorithm Dance",
     artist: "Code Beats",
     album: "Binary Rhythms",
-    cover: "/placeholder.svg?height=192&width=192",
+    cover: "/icons/folder.png?height=192&width=192",
     duration: 210,
   },
   {
@@ -44,7 +44,7 @@ const SAMPLE_TRACKS: Track[] = [
     title: "Function Harmony",
     artist: "Dev Tunes",
     album: "Clean Code",
-    cover: "/placeholder.svg?height=192&width=192",
+    cover: "/icons/folder.png?height=192&width=192",
     duration: 195,
   },
   {
@@ -52,7 +52,7 @@ const SAMPLE_TRACKS: Track[] = [
     title: "React Hooks",
     artist: "JS Vibes",
     album: "Frontend Melodies",
-    cover: "/placeholder.svg?height=192&width=192",
+    cover: "/icons/folder.png?height=192&width=192",
     duration: 224,
   },
 ]
@@ -170,7 +170,7 @@ export default function SpotifyApp() {
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 mb-4 rounded-md overflow-hidden shadow-lg">
               <img
-                src={currentTrack.cover || "/placeholder.svg"}
+                src={currentTrack.cover || "/icons/folder.png"}
                 alt={currentTrack.title}
                 className="w-full h-full object-cover"
               />
@@ -255,7 +255,7 @@ export default function SpotifyApp() {
               >
                 <div className="w-10 h-10 rounded overflow-hidden mr-3">
                   <img
-                    src={track.cover || "/placeholder.svg"}
+                    src={track.cover || "/icons/folder.png"}
                     alt={track.title}
                     className="w-full h-full object-cover"
                   />
