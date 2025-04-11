@@ -143,7 +143,10 @@ export default function StickyNoteAnimation() {
     };
 
     // Double click to add a new note
-    const handleDoubleClick = () => {
+    const handleDoubleClick = (e) => {
+      const taskbar = document.querySelector("#taskbar"); // id taskbar
+      const startMenu  = document.querySelector("#start-overlay"); // id start-menu
+      if(taskbar && taskbar.contains(e.target) || startMenu && startMenu.contains(e.target)) return; // Ignore clicks on taskbar
       addNewNote();
     };
 
