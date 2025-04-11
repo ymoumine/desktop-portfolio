@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import DesktopIcon from "@/components/desktop-icon"
 import { useWindows } from "@/components/windows-provider"
 import ProjectsApp from "@/components/apps/projects-app"
@@ -14,11 +14,37 @@ import TerminalApp from "@/components/apps/terminal-app"
 import ContextMenu from "@/components/context-menu"
 
 export default function Desktop() {
-  const { addWindow } = useWindows()
+  const { setActiveWindow, addWindow, windows } = useWindows()
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null)
 
+  // handle drag select
+  useEffect(() => {
+    const handleMouseDown = (e: MouseEvent) => {
+      e.preventDefault()
+    }
+
+    const handleMouseRightClick = (e: MouseEvent) => {
+      e.preventDefault()
+      setContextMenu({ x: e.clientX, y: e.clientY })
+    }
+    const handleMouseUp = (e: MouseEvent) => {
+      e.preventDefault()
+      setContextMenu(null)
+    }
+
+    window.addEventListener("mousedown", handleMouseDown)
+    window.addEventListener("contextmenu", handleMouseRightClick)
+    window.addEventListener("mouseup", handleMouseUp)
+
+    return () => {
+      window.removeEventListener("mousedown", handleMouseDown)
+      window.removeEventListener("contextmenu", handleMouseRightClick)
+      window.removeEventListener("mouseup", handleMouseUp)
+    }
+  }
+  , [contextMenu])
+  
   const handleContextMenu = (e: React.MouseEvent) => {
-    e.preventDefault()
     setContextMenu({ x: e.clientX, y: e.clientY })
   }
 
@@ -27,6 +53,13 @@ export default function Desktop() {
   }
 
   const openProjects = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "projects")
+    if (existingWindow) {
+      setActiveWindow("projects")
+      return
+    }
+    
     addWindow({
       id: "projects",
       title: "Projects",
@@ -38,6 +71,13 @@ export default function Desktop() {
   }
 
   const openResume = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "resume")
+    if (existingWindow) {
+      setActiveWindow("resume")
+      return
+    }
+
     addWindow({
       id: "resume",
       title: "Resume",
@@ -49,6 +89,13 @@ export default function Desktop() {
   }
 
   const openGithub = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "github")
+    if (existingWindow) {
+      setActiveWindow("github")
+      return
+    }
+
     addWindow({
       id: "github",
       title: "GitHub",
@@ -60,6 +107,13 @@ export default function Desktop() {
   }
 
   const openSpotify = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "spotify")
+    if (existingWindow) {
+      setActiveWindow("spotify")
+      return
+    }
+
     addWindow({
       id: "spotify",
       title: "Spotify Player",
@@ -71,6 +125,13 @@ export default function Desktop() {
   }
 
   const openAbout = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "about")
+    if (existingWindow) {
+      setActiveWindow("about")
+      return
+    }
+
     addWindow({
       id: "about",
       title: "About Me",
@@ -82,6 +143,13 @@ export default function Desktop() {
   }
 
   const openTerminal = () => {
+    // if already open, bring to front
+    const existingWindow = windows.find((w) => w.id === "terminal")
+    if (existingWindow) {
+      setActiveWindow("terminal")
+      return
+    }
+
     // add pop up animation
     addWindow({
       id: "terminal",

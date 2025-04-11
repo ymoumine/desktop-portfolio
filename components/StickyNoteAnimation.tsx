@@ -128,6 +128,7 @@ export default function StickyNoteAnimation() {
 
     const handleMouseDown = (e) => {
       // Store initial position
+      //e.preventDefault()
       dragStartY.current = e.clientY;
       dragStartX.current = e.clientX;
       isDragging.current = true;
@@ -182,27 +183,29 @@ export default function StickyNoteAnimation() {
   );
 
   return (
-    <div className="absolute w-full h-full top-0 right-0 z-10">
-      <Canvas camera={{ position: [0, 0, 15], fov: 40 }}>
-        <ambientLight intensity={0.8} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} />
-        <pointLight position={[-10, -10, 10]} intensity={0.3} />
-        <hemisphereLight intensity={0.3} groundColor="#eee" />
-        <directionalLight position={[5, 5, 5]} intensity={0.5} />
+    <div className="absolute top-0 right-0 z-10 w-[30vw] h-[90vh]">
+      <Canvas camera={{ position: [2, 0, 15], fov: 35 }}>
+      <ambientLight intensity={0.8} />
+      <pointLight position={[10, 10, 10]} intensity={0.5} />
+      <pointLight position={[-10, -10, 10]} intensity={0.3} />
+      <hemisphereLight intensity={0.3} groundColor="#eee" />
+      <directionalLight position={[5, 5, 5]} intensity={0.5} />
 
+      <group position={[0, 2.5, 0]}>  {/* Added group with Y offset */}
         <SceneContent
-          visibleNotes={sortedVisibleNotes}
-          activeNoteId={activeNoteId}
-          setActiveNoteId={setActiveNoteId}
-          mousePosition={mousePosition}
-          isDragging={isDragging}
-          dragStartY={dragStartY}
-          dragStartX={dragStartX}
-          onNoteRemoved={handleNoteRemoved}
-          onNoteFalling={handleNoteFalling}
-          topmostNoteId={topmostNoteId}
-          hasSelectedNote={hasSelectedNote}
+        visibleNotes={sortedVisibleNotes}
+        activeNoteId={activeNoteId}
+        setActiveNoteId={setActiveNoteId}
+        mousePosition={mousePosition}
+        isDragging={isDragging}
+        dragStartY={dragStartY}
+        dragStartX={dragStartX}
+        onNoteRemoved={handleNoteRemoved}
+        onNoteFalling={handleNoteFalling}
+        topmostNoteId={topmostNoteId}
+        hasSelectedNote={hasSelectedNote}
         />
+      </group>
       </Canvas>
 
       {/* Instructions overlay */}
@@ -315,7 +318,7 @@ const StickyNote = ({
   const localDragStartX = useRef(0);
 
   const fallStartTime = useRef(0);
-  const maxDragDistance = 250; // Reduced for faster peeling
+  const maxDragDistance = 350; // total drag distance
 
   // Physics state for the falling paper
   const fallVelocity = useRef({ x: 0, y: 0, rotation: 0 });
