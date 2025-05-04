@@ -21,38 +21,35 @@ export default function AboutApp() {
                 alt="Profile"
                 className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow"
               />
-              <h3 className="text-xl font-bold mb-1">Yassine Developer</h3>
-              <p className="text-gray-600 mb-4">Full Stack Developer</p>
+              <h3 className="text-xl font-bold mb-1">Yassine Moumine</h3>
+              <p className="text-gray-600 mb-4">Software Developer | AI Enthusiast</p>
 
               <div className="space-y-2 text-sm text-left">
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-gray-500" />
-                  <span>contact@example.com</span>
+                  <span>yassine.moumine@example.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-2 text-gray-500" />
-                  <span>San Francisco, CA</span>
+                  <span>Ottawa, ON, Canada</span>
                 </div>
                 <div className="flex items-center">
                   <Briefcase className="w-4 h-4 mr-2 text-gray-500" />
-                  <span>Tech Innovations Inc.</span>
+                  <span>University of Ottawa | Kelpie Robotics</span>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2 text-gray-500" />
-                  <span>5+ Years Experience</span>
+                  <span>3+ Years Experience</span>
                 </div>
               </div>
 
               <div className="mt-4 pt-4 border-t">
                 <div className="flex justify-center space-x-3">
-                  <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <a href="https://github.com/YassineMoumine" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
                     <img src="/icons/folder.png?height=20&width=20" alt="GitHub" className="w-5 h-5" />
                   </a>
-                  <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <a href="https://linkedin.com/in/yassinemoumine" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
                     <img src="/icons/folder.png?height=20&width=20" alt="LinkedIn" className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                    <img src="/icons/folder.png?height=20&width=20" alt="Twitter" className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -66,13 +63,12 @@ export default function AboutApp() {
                 Who I Am
               </h3>
               <p className="text-gray-700 mb-3">
-                Hello! I'm Yassine, a passionate Full Stack Developer with over 5 years of experience building modern
-                web applications. I specialize in creating intuitive, responsive, and performant user interfaces with
-                React and Next.js, backed by robust Node.js APIs.
+                Hi! I'm Yassine, a Recent Computer Engineering Grad and passionate software developer with over three years of experience. 
+                I’ve worked on full-stack web apps, machine learning models, mobile apps, and embedded systems.
               </p>
               <p className="text-gray-700">
-                I'm dedicated to writing clean, maintainable code and staying up-to-date with the latest technologies
-                and best practices. I enjoy solving complex problems and turning ideas into reality through code.
+                I enjoy building meaningful applications, contributing to robotics and AI projects, and leading impactful software renovations.
+                I value clean, efficient code and thrive in collaborative environments that push innovation forward.
               </p>
             </div>
 
@@ -83,27 +79,27 @@ export default function AboutApp() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-medium mb-2">Frontend Development</h4>
+                  <h4 className="font-medium mb-2">Full Stack Development</h4>
                   <p className="text-sm text-gray-600">
-                    Building responsive and interactive user interfaces with React, Next.js, and modern CSS frameworks.
+                    Building scalable and interactive applications using React.js, Next.js, Node.js, and PostgreSQL.
                   </p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-medium mb-2">Backend Development</h4>
+                  <h4 className="font-medium mb-2">AI & Machine Learning</h4>
                   <p className="text-sm text-gray-600">
-                    Creating robust APIs and server-side applications with Node.js, Express, and various databases.
+                    Experimenting with deep learning models using TensorFlow and Keras for classification, image recognition, and prediction tasks.
                   </p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-medium mb-2">UI/UX Design</h4>
+                  <h4 className="font-medium mb-2">Embedded Systems</h4>
                   <p className="text-sm text-gray-600">
-                    Designing intuitive user experiences and translating them into beautiful interfaces.
+                    Writing Linux-compatible sensor drivers and working with TCP/UDP sockets to log and transmit environmental data.
                   </p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-medium mb-2">Performance Optimization</h4>
+                  <h4 className="font-medium mb-2">Systems & Infrastructure</h4>
                   <p className="text-sm text-gray-600">
-                    Improving application speed and efficiency through code optimization and best practices.
+                    Proficient in Docker, Kubernetes, and CI/CD pipelines to deploy, monitor, and manage backend systems at scale.
                   </p>
                 </div>
               </div>
@@ -115,13 +111,13 @@ export default function AboutApp() {
                 What I Love
               </h3>
               <div className="space-y-3">
-                <p className="text-gray-700">When I'm not coding, you can find me:</p>
+                <p className="text-gray-700">Outside of code, I’m passionate about:</p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Exploring new technologies and contributing to open source</li>
-                  <li>Reading tech blogs and books on software development</li>
-                  <li>Hiking and enjoying the outdoors</li>
-                  <li>Playing guitar and listening to music</li>
-                  <li>Traveling and experiencing different cultures</li>
+                  <li>Working on robotics and AI-driven automation projects</li>
+                  <li>Participating in hackathons and solving real-world challenges</li>
+                  <li>Mentoring peers and contributing to university tech clubs</li>
+                  <li>Learning about Islamic finance and ethical tech innovation</li>
+                  <li>Spending time outdoors and connecting with family</li>
                 </ul>
               </div>
             </div>
@@ -131,4 +127,3 @@ export default function AboutApp() {
     </div>
   )
 }
-
